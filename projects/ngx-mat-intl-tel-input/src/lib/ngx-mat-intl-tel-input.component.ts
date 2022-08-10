@@ -247,6 +247,8 @@ export class NgxMatIntlTelInputComponent
           this.selectedCountry = this.getCountry(this.numberInstance.country);
           this.countryChanged.emit(this.selectedCountry);
         }
+      } else {
+        this.value = this.phoneNumber?.toString();
       }
     } catch (e) {
       // if no possible numbers are there,
